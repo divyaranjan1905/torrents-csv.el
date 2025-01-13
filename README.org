@@ -1,0 +1,8 @@
+#+TITLE: torrents-csv.el
+#+OPTIONS: toc:nil
+
+=torrents-csv.el= is a package for GNU Emacs that acts as a front-end to the repository of torrents, [[https://torrents-csv.com/][torrents.csv]].
+
+While the database isn’t the most comprehensive repository of all torrents, it does track a good chunk of the ones that at least have one active seeder. And as such, it can be a search-engine for torrents without ever leaving the comfort of an Emacs buffer.
+
+Even though one can self-host the database, I rely on the “demo” server, i.e., [[https://torrents-csv.com][torrents-csv.com]].
