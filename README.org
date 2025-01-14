@@ -43,7 +43,7 @@ It will ask you to enter a query of what you wish to fetch, and almost instantly
 To copy the magnet of a torrent, simply press =m= or just click on the 🧲 icon for that particular row. The magnet would be copied to the =kill-ring= and can be pasted wherever you do your torrenting!
 
 * Configuration
-- You can change the number of torrent entries that get listed in =*Torrent Results*= buffer by modifying the ==torrent-csv-results-count=, as such:
+- You can change the number of torrent entries that get listed in =*Torrent Results*= buffer by modifying the =torrent-csv-results-count=, as such:
   #+begin_src emacs-lisp
 (setq torrent-csv-results-count "200")
   #+end_src
