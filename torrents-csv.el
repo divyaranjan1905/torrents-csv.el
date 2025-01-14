@@ -5,7 +5,7 @@
 ;; Author: Divya Ranjan Pattanaik <divya@subvertising.org>
 ;; Keywords: torrents, csv
 ;; Version: 0.1.0
-;; Package-Requires: emacs-24.1
+;; Package-Requires: ((emacs "24.1"))
 ;; URL: https://codeberg.org/divyaranjan/torrents-csv.el
 
 ;; This file is not part of GNU Emacs.
