@@ -20,7 +20,11 @@ The package can be installed directly from this repository using =straight=:
       	      :host codeberg
       	      :repo "divyaranjan/torrents-csv.el"))
 #+end_src
-
+...or if you don’t wish to rely on =straight= you can do the same with the inbuilt =:vc= argument:
+#+begin_src emacs-lisp
+(use-package torrents-csv
+    :vc (:url "https://codeberg.org/divyaranjan/torrents-csv.el"))
+#+end_src
 * Features
 The latest version of =torrents-csv.el= supports the following:
 - A neat =list-packages=-like tabulated interface with sortable columns.
