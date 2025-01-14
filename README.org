@@ -6,3 +6,50 @@
 While the database isn’t the most comprehensive repository of all torrents, it does track a good chunk of the ones that at least have one active seeder. And as such, it can be a search-engine for torrents without ever leaving the comfort of an Emacs buffer.
 
 Even though one can self-host the database, I rely on the “demo” server, i.e., [[https://torrents-csv.com][torrents-csv.com]].
+
+* Screencast
+[[file:extras/screencast-2025-01-14_08.56.04.webm]]
+
+Screencast showing searching and copying a magnet swiftly.
+
+* Installation
+The package can be installed directly from this repository using =straight=:
+#+begin_src emacs-lisp
+  (use-package torrents-csv
+    :straight '(torrents-csv :location (recipe
+  				      :fetcher codeberg
+  				      :repo "divyaranjan/torrents-csv.el")))
+#+end_src
+
+* Features
+The latest version of =torrents-csv.el= supports the following:
+- A neat =list-packages=-like tabulated interface with sortable columns.
+- Quick fetching of magnets using button clicks or keybindings.
+
+Here are some upcoming features that are in the works:
+- Integration with [[https://github.com/skangas/mentor][mentor]] and [[https://rakshasa.github.io/rtorrent/][rTorrent]] to download torrents directly from the buffer.
+- Integration with [[https://www.qbittorrent.org/][qbittorrent]] to download torrents.
+- Fetch torrent file for the current entry’s magnet.
+- Add =transient= support in the =torrents-list-mode=.
+
+* Usage
+Once installed, just do:
+#+begin_src emacs-lisp
+M-x search-torrents RET
+#+end_src
+
+It will ask you to enter a query of what you wish to fetch, and almost instantly you’d have a buffer named =*Torrents Results*= with a tabulated list of torrents.
+
+To copy the magnet of a torrent, simply press =m= or just click on the 🧲 icon for that particular row. The magnet would be copied to the =kill-ring= and can be pasted wherever you do your torrenting!
+
+* Configuration
+- You can change the number of torrent entries that get listed in =*Torrent Results*= buffer by modifying the ==torrent-csv-results-count=, as such:
+  #+begin_src emacs-lisp
+(setq torrent-csv-results-count "200")
+  #+end_src
+  Note that the variable is a string, which would be concatenated later on with the API URL, so putting the number inside quotes is necessary.
+- If you self-host =torrents-csv= then you can change the default =torrents-csv-domain= variable to something like this:
+  #+begin_src emacs-lisp
+(setq torrents-csv-domain "http://localhost:8657")
+  #+end_src
+  The port being the one with which you configured the =torrents-csv= server.
