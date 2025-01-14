@@ -8,7 +8,7 @@ While the database isn’t the most comprehensive repository of all torrents, it
 Even though one can self-host the database, I rely on the “demo” server, i.e., [[https://torrents-csv.com][torrents-csv.com]].
 
 * Screencast
-[[file:extras/screencast-2025-01-14_08.56.04.webm]]
+[[file:extras/screencast.gif]]
 
 Screencast showing searching and copying a magnet swiftly.
 
