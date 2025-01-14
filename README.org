@@ -17,8 +17,8 @@ The package can be installed directly from this repository using =straight=:
 #+begin_src emacs-lisp
   (use-package torrents-csv
     :straight '(torrents-csv
-  	      :host codeberg
-  	      :repo "divyaranjan/torrents-csv.el"))
+      	      :host codeberg
+      	      :repo "divyaranjan/torrents-csv.el"))
 #+end_src
 
 * Features
