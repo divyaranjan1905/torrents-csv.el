@@ -16,9 +16,9 @@ Screencast showing searching and copying a magnet swiftly.
 The package can be installed directly from this repository using =straight=:
 #+begin_src emacs-lisp
   (use-package torrents-csv
-    :straight '(torrents-csv :location (recipe
-  				      :fetcher codeberg
-  				      :repo "divyaranjan/torrents-csv.el")))
+    :straight '(torrents-csv
+  	      :host codeberg
+  	      :repo "divyaranjan/torrents-csv.el"))
 #+end_src
 
 * Features
