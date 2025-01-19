@@ -170,3 +170,6 @@ then the appropriate localhost address and port is to be defined."
 			  (message "Failed to fetch torrents")
 			(let ((data (torrents-json-parse-buffer)))
 			  (torrents-display-tabulated data))))))))
+
+(provide 'torrents-csv)
+;;; torrents-csv.el ends here
