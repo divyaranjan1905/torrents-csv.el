@@ -69,8 +69,8 @@ then the appropriate localhost address and port is to be defined."
   (interactive)
   (let* ((entry (tabulated-list-get-entry))
 	 (magnet (aref entry 5)))
-      (kill-new magnet)
-      (message "🧲 has been copied to clipboard!")))
+    (kill-new magnet)
+    (message "🧲 has been copied to clipboard!")))
 
 (defun round-to-decimals-safe (number decimals)
   "Round NUMBER to DECIMALS decimal places with input validation."
@@ -89,9 +89,7 @@ then the appropriate localhost address and port is to be defined."
 	     (round-to-decimals-safe
 	      (/ (float bytes) (float 1000000)) 2)) "M")))
 
-
 ;;; Torrents List Mode and Keymaps
-
 (defvar-keymap torrents-list-mode-map
   "m" #'copy-magnet-from-row)
 
